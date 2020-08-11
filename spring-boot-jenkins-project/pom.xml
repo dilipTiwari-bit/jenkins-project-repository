@@ -5,16 +5,20 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.innominds.jenkins</groupId>
-	<artifactId>springboot-vidhya-sample</artifactId>
+	<artifactId>spring-boot-jenkins-project</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>springboot-vidhya-sample</name>
+	<name>spring-boot-jenkins-project</name>
 	<description>Sample project for Spring Boot</description>
 
-	<!-- <parent> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
-		<version>2.3.2.RELEASE</version> <relativePath /> lookup parent from repository 
-		</parent> -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.2.RELEASE</version>
+		<relativePath />
+		<!-- lookup parent from repository -->
+	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +30,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>2.3.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -35,7 +51,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.3.2.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>
